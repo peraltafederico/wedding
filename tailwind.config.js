@@ -1,20 +1,25 @@
-import {nextui} from '@nextui-org/theme'
+import { nextui } from '@nextui-org/theme';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
+      colors: {
+        mossGreen: '#939369',
+      },
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        whiteStar: ['var(--font-white-star)'],
+        sans: ['var(--font-young-serif)', 'var(--font-sans)'],
+        mono: ['var(--font-mono)'],
+        youngSerif: ['var(--font-young-serif)'],
       },
     },
   },
-  darkMode: "class",
-  plugins: [nextui()],
-}
+  darkMode: 'class',
+  plugins: [nextui({})],
+};
