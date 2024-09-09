@@ -15,7 +15,7 @@ function Section({ children, fullScreen, className }: Props) {
           'p-8': !fullScreen,
           'w-screen h-screen': fullScreen,
         },
-        'overflow-hidden',
+        // 'overflow-hidden',
         'relative'
       )}>
       {children}

@@ -15,16 +15,16 @@ import 'swiper/css/effect-cards';
 function UsSection() {
   return (
     <Section>
-      <NextImage
+      {/* <NextImage
         alt='Default Image'
         src={simpleFlower}
         style={{
-          opacity: 0.25,
+          opacity: 0.1,
           width: '300px',
           top: 0,
           position: 'absolute',
         }}
-      />
+      /> */}
       <Swiper className='mySwiper' effect={'cards'} grabCursor={true} modules={[EffectCards]}>
         <SwiperSlide className={`bg-[url('/slide1.jpg')] bg-center bg-cover`} />
         <SwiperSlide className={`bg-[url('/slide2.jpg')] bg-center bg-cover`} />
