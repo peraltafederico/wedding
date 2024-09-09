@@ -4,7 +4,7 @@ import React from 'react';
 
 function CoverSection() {
   return (
-    <section className='w-screen h-screen'>
+    <section className='w-screen h-dvh'>
       <div className={`absolute w-full h-full bg-[url('/cover.jpg')] bg-fixed bg-center bg-cover`}>
         {/* <NextImage
           fill
