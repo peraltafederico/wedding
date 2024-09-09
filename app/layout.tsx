@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           youngSerif.variable
         )}>
         <AOSinit />
-        <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
-          <div className='relative flex flex-col h-screen'>
+        <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
+          <div>
             {/* <Navbar /> */}
             <main className='w-full'>{children}</main>
             {/* <footer className='w-full flex items-center justify-center py-3'>
