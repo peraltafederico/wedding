@@ -5,9 +5,11 @@ import NextImage from 'next/image';
 
 import cover from '../assets/cover.jpg';
 
+import Section from './section';
+
 function CoverSection() {
   return (
-    <section className='w-screen h-screen'>
+    <Section fullScreen>
       <div className={`absolute w-full h-full`}>
         <NextImage
           fill
@@ -25,7 +27,7 @@ function CoverSection() {
           <h1 className='leading-snug'>Nos Casamos!</h1>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
