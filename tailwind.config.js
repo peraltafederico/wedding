@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        offWhite: '#FAF9F6',
         mossGreen: '#939369',
       },
       fontFamily: {
@@ -21,5 +22,15 @@ module.exports = {
     },
   },
   darkMode: 'class',
-  plugins: [nextui({})],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            background: '#FAF9F6',
+          },
+        },
+      },
+    }),
+  ],
 };
