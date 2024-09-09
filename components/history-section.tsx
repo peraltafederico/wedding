@@ -26,20 +26,24 @@ function HistorySection() {
           }}
         />
         <div className='flex flex-col gap-6 text-center'>
-          <div className='font-bold text-2xl flex flex-col'>
-            <h2>
-              <span className='block'>{`Todo empezó con un`}</span>
-              <span className='block'>{`"Me Gusta"`}</span>
-            </h2>
+          <div data-aos='fade-up'>
+            <div className='font-bold text-2xl flex flex-col'>
+              <h2>
+                <span className='block'>{`Todo empezó con un`}</span>
+                <span className='block'>{`"Me Gusta"`}</span>
+              </h2>
+            </div>
+            <p className='leading-loose'>
+              En tiempos de Facebook nos conocimos a traves de un ¨Me Gusta¨, en esos estados de canciones que uno
+              publicaba en el muro. Nuestros caminos se cruzaron siendo adolescentes, crecimos a la par y formamos a lo
+              largo de estos 10 años una hermosa relaciasdón de compañerismo, amistad, amor y respeto. Hoy queremos
+              festejar el amor que nos tenemos el uno para el otro con las personas que formaron y forman parte
+              importante en nuestras vidas. <span className='text-mossGreen'>Y vos sos una de ellas.</span>
+            </p>
           </div>
-          <p className='leading-loose'>
-            En tiempos de Facebook nos conocimos a traves de un ¨Me Gusta¨, en esos estados de canciones que uno
-            publicaba en el muro. Nuestros caminos se cruzaron siendo adolescentes, crecimos a la par y formamos a lo
-            largo de estos 10 años una hermosa relaciasdón de compañerismo, amistad, amor y respeto. Hoy queremos
-            festejar el amor que nos tenemos el uno para el otro con las personas que formaron y forman parte importante
-            en nuestras vidas. <span className='text-mossGreen'>Y vos sos una de ellas.</span>
-          </p>
-          <p className='font-whiteStar text-3xl text-mossGreen'>Listo para formar parte de nuestra celebracion?</p>
+          <div data-aos='fade-up'>
+            <p className='font-whiteStar text-3xl text-mossGreen'>Listo para formar parte de nuestra celebracion?</p>
+          </div>
         </div>
       </div>
     </Section>
