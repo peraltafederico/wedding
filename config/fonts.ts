@@ -15,5 +15,6 @@ export const starWhite = localFont({ src: './white-star.ttf', variable: '--font-
 
 export const youngSerif = Montserrat({
   variable: '--font-young-serif',
+  subsets: ['latin'],
   weight: ['400', '700'],
 });
