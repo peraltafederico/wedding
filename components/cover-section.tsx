@@ -1,15 +1,12 @@
 'use client';
 
 import React from 'react';
-import NextImage from 'next/image';
-
-import cover from '../assets/cover.jpg';
 
 function CoverSection() {
   return (
     <section className='w-screen h-screen'>
-      <div className='absolute w-full h-full'>
-        <NextImage
+      <div className={`absolute w-full h-full bg-[url('/cover.jpg')] bg-fixed bg-center bg-cover`}>
+        {/* <NextImage
           fill
           alt='Default Image'
           src={cover}
@@ -17,12 +14,12 @@ function CoverSection() {
             backgroundPositionY: 'center',
             objectFit: 'cover',
           }}
-        />
+        /> */}
       </div>
-      <div className='absolute w-full h-full flex' data-aos='fade-up'>
-        <div className='flex flex-col mt-auto justify-center w-full mb-24 gap-12'>
-          <h1 className='w-full text-center !text-white font-whiteStar text-6xl'>Cami y Fede</h1>
-          <h1 className='w-full text-center text-white font-whiteStar text-6xl'>Nos Casamos!</h1>
+      <div className='absolute w-full h-full flex' data-aos='zoom-out'>
+        <div className='font-whiteStar flex text-center text-4xl flex-col mt-auto text-white w-full mb-8 gap-6'>
+          <h1 className='leading-snug'>Cami y Fede</h1>
+          <h1 className='leading-snug'>Nos Casamos!</h1>
         </div>
       </div>
     </section>
