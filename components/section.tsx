@@ -11,16 +11,24 @@ function Section({ children, fullScreen, className }: Props) {
     <section
       className={clsx(
         className,
+        // 'overflow-hidden',
+        'relative',
+        'flex',
+        'w-full',
         {
           'p-8': !fullScreen,
           'w-screen h-screen': fullScreen,
-        },
-        // 'overflow-hidden',
-        'relative'
+        }
       )}>
       {children}
     </section>
   );
 }
+
+function Center({ children, className }: Props) {
+  return <div className={clsx('flex justify-center items-center relative w-full', className)}>{children}</div>;
+}
+
+export { Center };
 
 export default Section;

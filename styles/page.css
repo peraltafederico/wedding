@@ -11,3 +11,15 @@
   font-weight: bold;
   color: #fff;
 }
+
+.scroll-snap {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.scroll-snap > section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+}

@@ -7,7 +7,7 @@ import NextImage from 'next/image';
 
 import simpleFlower from '../assets/simple-flower.png';
 
-import Section from './section';
+import Section, { Center } from './section';
 
 import 'swiper/css';
 import 'swiper/css/effect-cards';
@@ -15,7 +15,8 @@ import 'swiper/css/effect-cards';
 function UsSection() {
   return (
     <Section>
-      {/* <NextImage
+      <Center>
+        {/* <NextImage
         alt='Default Image'
         src={simpleFlower}
         style={{
@@ -25,11 +26,12 @@ function UsSection() {
           position: 'absolute',
         }}
       /> */}
-      <Swiper className='mySwiper' effect={'cards'} grabCursor={true} modules={[EffectCards]}>
-        <SwiperSlide className={`bg-[url('/slide1.jpg')] bg-center bg-cover`} />
-        <SwiperSlide className={`bg-[url('/slide2.jpg')] bg-center bg-cover`} />
-        <SwiperSlide className={`bg-[url('/slide3.jpg')] bg-center bg-cover`} />
-      </Swiper>
+        <Swiper className='mySwiper' effect={'cards'} grabCursor={true} modules={[EffectCards]}>
+          <SwiperSlide className={`bg-[url('/slide1.jpg')] bg-center bg-cover`} />
+          <SwiperSlide className={`bg-[url('/slide2.jpg')] bg-center bg-cover`} />
+          <SwiperSlide className={`bg-[url('/slide3.jpg')] bg-center bg-cover`} />
+        </Swiper>
+      </Center>
     </Section>
   );
 }
