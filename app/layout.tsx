@@ -6,20 +6,76 @@ import AOSinit from '../components/aos';
 
 import { Providers } from './providers';
 
-import { siteConfig } from '@/config/site';
 import { fontSans, starWhite, youngSerif } from '@/config/fonts';
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: '¡Nos Casamos! Federico & Camila',
+    template: `%s | ¡Nos Casamos! Federico & Camila`,
   },
-  description: siteConfig.description,
+  description:
+    'Acompañanos en nuestro día más especial mientras celebramos nuestra boda. Detalles sobre la ceremonia, el lugar y mucho más.',
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    title: '¡Nos Casamos! Federico & Camila',
+    description:
+      'Unite a la celebración de nuestro casamiento. Encontrá toda la información sobre la ceremonia, recepción, y otros detalles importantes.',
+    url: '/',
+    images: [
+      {
+        url: '/cover.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Imagen del Casamiento de Federico y Camila',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@_pfederico',
+    description:
+      'Acompañanos en nuestro día más especial mientras celebramos nuestra boda. Detalles sobre la ceremonia, el lugar y mucho más.',
+    title: '¡Nos Casamos! Federico & Camila',
+    images: [
+      {
+        url: '/cover.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Imagen del Casamiento de Federico y Camila',
+      },
+    ],
+  },
+  keywords: [
+    'casamiento',
+    'boda',
+    'federico',
+    'camila',
+    'celebración',
+    'ceremonia',
+    'recepción',
+    'novios',
+    'casados',
+    'fiesta',
+    'celebrar',
+    'amor',
+    'compromiso',
+    'pareja',
+    'familia',
+    'amigos',
+    'invitados',
+    'evento',
+    'federico y camila',
+    'casamiento de federico y camila',
+    'fede y cami',
+    'federico',
+    'camila',
+    '17 de noviembre 2024',
+    'quinta de benavidez',
+  ],
+  themeColor: '#f5a623',
 };
-
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
@@ -42,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           <div>
             {/* <Navbar /> */}
-            <main className='w-full'>{children}</main>
+            <main className='w-full scroll-snap'>{children}</main>
             {/* <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal

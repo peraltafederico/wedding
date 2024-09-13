@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import Section from './section';
+import Section, { Center } from './section';
 
 import NextImage from 'next/image';
 
@@ -37,28 +37,30 @@ function Info({ children, description, title }: InfoProps) {
 function InfoSection() {
   return (
     <Section className='flex justify-center'>
-      <div className='flex flex-col items-center relative w-fit'>
-        <NextImage
-          alt='Default Image'
-          src={simpleFlower}
-          style={{
-            opacity: 0.1,
-            width: '300px',
-            maxWidth: 'unset',
-            top: 0,
-            left: -150,
-            position: 'absolute',
-          }}
-        />
-        <Info description='17 de Noviembre 2024' title='Fecha y hora'>
-          <span className='font-whiteStar text-mossGreen'>17:30 hs</span>
-        </Info>
-        <Info description='Elegante' title='Dress Code' />
-        <Info description='Quinta de Benavidez' title='Lugar'>
-          <span className='text-xs mt-2'>Mendoza 3499, Benavidez, Bs.As</span>
-        </Info>
-        <Info description='@noscasamos.camiyfede' title='Instagram' />
-      </div>
+      <Center className='flex flex-col items-center'>
+        <div className=' relative w-fit'>
+          <NextImage
+            alt='Default Image'
+            src={simpleFlower}
+            style={{
+              opacity: 0.1,
+              width: '300px',
+              maxWidth: 'unset',
+              top: 0,
+              left: -140,
+              position: 'absolute',
+            }}
+          />
+          <Info description='17 de Noviembre 2024' title='Fecha y hora'>
+            <span className='font-whiteStar text-mossGreen'>17:30 hs</span>
+          </Info>
+          <Info description='Elegante' title='Dress Code' />
+          <Info description='Quinta de Benavidez' title='Lugar'>
+            <span className='text-xs mt-2'>Mendoza 3499, Benavidez, Bs.As</span>
+          </Info>
+          <Info description='@noscasamos.camiyfede' title='Instagram' />
+        </div>
+      </Center>
     </Section>
   );
 }
