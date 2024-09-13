@@ -1,13 +1,13 @@
 import '@/styles/globals.css';
 import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
+import { Analytics } from '@vercel/analytics/react';
 
 import AOSinit from '../components/aos';
 
 import { Providers } from './providers';
 
 import { fontSans, starWhite, youngSerif } from '@/config/fonts';
-
 export const metadata: Metadata = {
   title: {
     default: '¡Nos Casamos! Federico & Camila',
@@ -94,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           starWhite.variable,
           youngSerif.variable
         )}>
+        <Analytics />
         <AOSinit />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           <div>
