@@ -17,7 +17,7 @@ function Section({ children, fullScreen, className }: Props) {
         'w-full',
         {
           'p-8': !fullScreen,
-          'w-screen h-screen': fullScreen,
+          'w-screen h-svh': fullScreen,
         }
       )}>
       {children}

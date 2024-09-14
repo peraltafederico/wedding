@@ -16,11 +16,11 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 100vh;
+  max-height: 100vh; /* not sure why it works */
 }
 
 .scroll-snap > section {
   scroll-snap-align: start;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
 }
