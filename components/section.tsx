@@ -18,7 +18,8 @@ function Section({ children, fullScreen, className }: Props) {
         {
           'p-8': !fullScreen,
           'w-screen h-svh': fullScreen,
-        }
+        },
+        'section'
       )}>
       {children}
     </section>

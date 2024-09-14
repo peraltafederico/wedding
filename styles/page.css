@@ -12,15 +12,12 @@
   color: #fff;
 }
 
-.scroll-snap {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+main {
   overflow-x: hidden;
-  max-height: 100vh; /* not sure why it works */
+  overflow-y: auto;
 }
 
-.scroll-snap > section {
-  scroll-snap-align: start;
+section {
   min-height: 100svh;
   display: flex;
 }
