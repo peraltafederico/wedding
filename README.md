@@ -1,8 +1,12 @@
-# Next.js & NextUI Template
+---
+runme:
+  id: 01J7SDBAF6PDQHTYN1905KHGFJ
+  version: v3
+---
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+# Wedding
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+This is my wedding website. It is a Next.js project with NextUI v2, Tailwind CSS, and TypeScript.
 
 ## Technologies Used
 
@@ -16,38 +20,14 @@ This is a template for creating applications using Next.js 14 (app directory) an
 
 ## How to Use
 
-### Use the template with create-next-app
+Install dependencies:
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+```bash {"id":"01J7SDBAF6PDQHTYN18WZYV76J"}
+pnpm install
 ```
 
-### Install dependencies
+Run the development server:
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
+```bash {"id":"01J7SDBAF6PDQHTYN18ZXG4V84"}
+pnpm dev
 ```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
