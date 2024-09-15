@@ -2,6 +2,7 @@
 
 import React from 'react';
 import NextImage from 'next/image';
+import clsx from 'clsx';
 
 import leftFlower2 from '../assets/left-flower-2.png';
 
@@ -12,7 +13,7 @@ function HistorySection() {
   return (
     <Section>
       <Center>
-        <NextImage
+        {/* <NextImage
           alt='Default Image'
           src={leftFlower2}
           style={{
@@ -24,7 +25,7 @@ function HistorySection() {
             maxWidth: 'unset',
             width: '300px',
           }}
-        />
+        /> */}
         <Body
           body={{
             text: (
@@ -39,7 +40,7 @@ function HistorySection() {
           }}
           cta={{
             component: (
-              <p className='font-whiteStar text-3xl text-mossGreen'>Listo para formar parte de nuestra celebracion?</p>
+              <p className='font-whiteStar text-xl text-mossGreen'>Listo para formar parte de nuestra celebracion?</p>
             ),
           }}
           title={{

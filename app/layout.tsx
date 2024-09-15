@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { Analytics } from '@vercel/analytics/react';
 
 import AOSinit from '../components/aos';
+import Snap from '../components/snap';
 
 import { Providers } from './providers';
 
@@ -89,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body
         className={clsx(
-          'min-h-screen bg-background font-sans antialiased ',
+          ' bg-background font-sans antialiased ',
           fontSans.variable,
           starWhite.variable,
           youngSerif.variable
@@ -97,10 +98,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <AOSinit />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div>
-            {/* <Navbar /> */}
-            <main className='w-full scroll-snap'>{children}</main>
-            {/* <footer className='w-full flex items-center justify-center py-3'>
+          {/* <Navbar /> */}
+          <Snap>{children}</Snap>
+          {/* <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal
                 className='flex items-center gap-1 text-current'
@@ -110,7 +110,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <p className='text-primary'>NextUI</p>
               </Link>
             </footer> */}
-          </div>
         </Providers>
       </body>
     </html>
