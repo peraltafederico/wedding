@@ -1,15 +1,14 @@
 'use client';
 
 import React from 'react';
-
-import Section, { Center } from './section';
-
 import NextImage from 'next/image';
+
+import Section, { Center } from '../section';
 
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import date from '../assets/date.png';
-import simpleFlower from '../assets/simple-flower.png';
+import date from '../../assets/date.png';
+import simpleFlower from '../../assets/simple-flower.png';
 
 type InfoProps = {
   children?: React.ReactNode;
