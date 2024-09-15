@@ -21,6 +21,6 @@ section {
   min-height: 100svh;
 }
 
-/* .fp-overflow {
+.fp-overflow {
   overflow-y: visible !important;
-} */
+}
