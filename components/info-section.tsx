@@ -39,7 +39,7 @@ function InfoSection() {
     <Section className='flex justify-center'>
       <Center className='flex flex-col items-center'>
         <div className=' relative w-fit'>
-          <NextImage
+          {/* <NextImage
             alt='Default Image'
             src={simpleFlower}
             style={{
@@ -50,7 +50,7 @@ function InfoSection() {
               left: -140,
               position: 'absolute',
             }}
-          />
+          /> */}
           <Info description='17 de Noviembre 2024' title='Fecha y hora'>
             <span className='font-whiteStar text-mossGreen'>17:30 hs</span>
           </Info>
@@ -58,7 +58,7 @@ function InfoSection() {
           <Info description='Quinta de Benavidez' title='Lugar'>
             <span className='text-xs mt-2'>Mendoza 3499, Benavidez, Bs.As</span>
           </Info>
-          <Info description='@noscasamos.camiyfede' title='Instagram' />
+          {/* <Info description='@noscasamos.camiyfede' title='Instagram' /> */}
         </div>
       </Center>
     </Section>

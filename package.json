@@ -9,6 +9,7 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
+		"@fullpage/react-fullpage": "^0.1.44",
 		"@next/font": "^14.2.8",
 		"@nextui-org/button": "2.0.37",
 		"@nextui-org/code": "2.0.32",
@@ -35,6 +36,7 @@
 		"next-themes": "^0.2.1",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
+		"sharp": "^0.33.5",
 		"swiper": "^11.1.12"
 	},
 	"devDependencies": {

@@ -12,7 +12,7 @@ type Props = {
     text: string | React.ReactNode;
     className?: string;
   };
-  cta: {
+  cta?: {
     component: React.ReactNode;
     className?: string;
   };
@@ -22,19 +22,12 @@ type Props = {
 function Body({ cta, body, title, className }: Props) {
   return (
     <div className={clsx('flex flex-col gap-6 text-center justify-center w-full', className)}>
-      <div
-      // data-aos='fade-up'
-      >
-        <div className='font-bold text-2xl flex justify-center mb-6'>
+      <div data-aos='fade-up'>
+        <div className='font-bold text-xl flex justify-center mb-4'>
           <h2 className={title.className}>{title.text}</h2>
         </div>
-        {body && <p className={clsx('leading-loose', body.className)}>{body.text}</p>}
-        <div
-          className={clsx('mt-4', cta.className)}
-          // data-aos='fade-up'
-        >
-          {cta.component}
-        </div>
+        {body && <p className={clsx('leading-loose text-sm', body.className)}>{body.text}</p>}
+        {cta && <div className={clsx('mt-4', cta.className)}>{cta.component}</div>}
       </div>
     </div>
   );
