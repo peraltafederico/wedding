@@ -2,6 +2,7 @@
 
 import React from 'react';
 import NextImage from 'next/image';
+import clsx from 'clsx';
 
 import leftFlower2 from '../assets/left-flower-2.png';
 

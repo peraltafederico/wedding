@@ -11,14 +11,7 @@ function Section({ children, fullScreen, className }: Props) {
     <section
       className={clsx(
         className,
-        // 'overflow-hidden',
-        'relative',
-        'flex',
-        'w-full',
-        {
-          'p-8': !fullScreen,
-          'w-screen h-svh': fullScreen,
-        },
+
         'section'
       )}>
       {children}
@@ -27,7 +20,7 @@ function Section({ children, fullScreen, className }: Props) {
 }
 
 function Center({ children, className }: Props) {
-  return <div className={clsx('flex justify-center items-center relative w-full', className)}>{children}</div>;
+  return <div className={clsx('flex justify-center items-center relative w-full p-8', className)}>{children}</div>;
 }
 
 export { Center };

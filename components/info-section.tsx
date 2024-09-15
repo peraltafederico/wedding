@@ -58,7 +58,7 @@ function InfoSection() {
           <Info description='Quinta de Benavidez' title='Lugar'>
             <span className='text-xs mt-2'>Mendoza 3499, Benavidez, Bs.As</span>
           </Info>
-          <Info description='@noscasamos.camiyfede' title='Instagram' />
+          {/* <Info description='@noscasamos.camiyfede' title='Instagram' /> */}
         </div>
       </Center>
     </Section>

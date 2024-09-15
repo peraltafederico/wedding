@@ -98,10 +98,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <AOSinit />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <div>
-            {/* <Navbar /> */}
-            <Snap>{children}</Snap>
-            {/* <footer className='w-full flex items-center justify-center py-3'>
+          {/* <Navbar /> */}
+          <Snap>{children}</Snap>
+          {/* <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal
                 className='flex items-center gap-1 text-current'
@@ -111,7 +110,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <p className='text-primary'>NextUI</p>
               </Link>
             </footer> */}
-          </div>
         </Providers>
       </body>
     </html>

@@ -1,29 +1,24 @@
 'use client';
 
-import React, { createRef, useEffect, useRef } from 'react';
-
 type Props = {
   children: React.ReactNode;
 };
-import fullpage from 'fullpage.js';
+
+import ReactFullpage from '@fullpage/react-fullpage'; // will return static version on server and "live" version on client
 
 function Snap({ children }: Props) {
-  const isSet = useRef(false);
-
-  useEffect(() => {
-    if (!window) return;
-    if (isSet.current) return;
-    new fullpage('#fullpage', {
-      //options here
-      scrollBar: true,
-    });
-    isSet.current = true;
-  }, []);
-
   return (
-    <main className='w-full' id='fullpage'>
-      {children}
-    </main>
+    <ReactFullpage
+      scrollBar
+      credits={{
+        enabled: false,
+      }}
+      licenseKey='xxxxxxxxxx'
+      render={() => {
+        return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
+      }}
+      scrollingSpeed={1000}
+    />
   );
 }
 

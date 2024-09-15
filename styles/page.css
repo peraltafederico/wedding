@@ -13,11 +13,14 @@
 }
 
 main {
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
 }
 
 section {
   min-height: 100svh;
-  display: flex;
 }
+
+/* .fp-overflow {
+  overflow-y: visible !important;
+} */
