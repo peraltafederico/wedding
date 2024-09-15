@@ -5,9 +5,8 @@ import NextImage from 'next/image';
 import clsx from 'clsx';
 
 import leftFlower2 from '../assets/left-flower-2.png';
-
-import Section, { Center } from './section';
-import Body from './body';
+import Section, { Center } from '../section';
+import Body from '../body';
 
 function HistorySection() {
   return (

@@ -6,8 +6,7 @@ import { EffectCards } from 'swiper/modules';
 import NextImage from 'next/image';
 
 import simpleFlower from '../assets/simple-flower.png';
-
-import Section, { Center } from './section';
+import Section, { Center } from '../section';
 
 import 'swiper/css';
 import 'swiper/css/effect-cards';
