@@ -40,7 +40,7 @@ function HistorySection() {
           }}
           cta={{
             component: (
-              <p className='font-whiteStar text-3xl text-mossGreen'>Listo para formar parte de nuestra celebracion?</p>
+              <p className='font-whiteStar text-xl text-mossGreen'>Listo para formar parte de nuestra celebracion?</p>
             ),
           }}
           title={{

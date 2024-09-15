@@ -20,7 +20,9 @@ function Section({ children, fullScreen, className }: Props) {
 }
 
 function Center({ children, className }: Props) {
-  return <div className={clsx('flex justify-center items-center relative w-full p-8', className)}>{children}</div>;
+  return (
+    <div className={clsx('flex justify-center items-center relative w-full px-4 flex-col', className)}>{children}</div>
+  );
 }
 
 export { Center };

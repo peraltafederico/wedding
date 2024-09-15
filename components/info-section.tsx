@@ -51,7 +51,7 @@ function InfoSection() {
               position: 'absolute',
             }}
           /> */}
-          <Info description='17 de Noviembre 2024' title='Fecha y hora'>
+          <Info description='17/11/24' title='Fecha y hora'>
             <span className='font-whiteStar text-mossGreen'>17:30 hs</span>
           </Info>
           <Info description='Elegante' title='Dress Code' />

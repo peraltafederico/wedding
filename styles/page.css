@@ -24,3 +24,7 @@ section {
 .fp-overflow {
   overflow-y: visible !important;
 }
+
+.fp-watermark {
+  display: none;
+}
