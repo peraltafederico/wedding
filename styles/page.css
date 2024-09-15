@@ -12,17 +12,19 @@
   color: #fff;
 }
 
-main {
-  /* overflow-x: hidden; */
-  /* overflow-y: auto; */
-}
-
 section {
-  min-height: 100svh;
+  min-height: 100svh !important;
+  height: 100svh !important;
+  max-height: 100svh !important;
 }
 
 .fp-overflow {
-  overflow-y: visible !important;
+  display: flex;
+  min-height: 100svh;
+  max-height: 100svh !important;
+  @media screen and (min-height: 550px) {
+    overflow-y: visible !important;
+  }
 }
 
 .fp-watermark {
