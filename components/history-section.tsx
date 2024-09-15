@@ -13,7 +13,7 @@ function HistorySection() {
   return (
     <Section>
       <Center>
-        <NextImage
+        {/* <NextImage
           alt='Default Image'
           src={leftFlower2}
           style={{
@@ -25,7 +25,7 @@ function HistorySection() {
             maxWidth: 'unset',
             width: '300px',
           }}
-        />
+        /> */}
         <Body
           body={{
             text: (
