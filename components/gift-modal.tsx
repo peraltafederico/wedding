@@ -35,7 +35,7 @@ function GiftModal({ isOpen, onOpenChange }: Props) {
             </ModalBody>
             <ModalFooter className='md:py-[1em] md:px-[1.5em]'>
               <Button className='md:text-[1em] md:min-w-[5em] md:h-[2.5em] font-bold' color='primary' onPress={onClose}>
-                Cerrar
+                Volver
               </Button>
             </ModalFooter>
           </>
