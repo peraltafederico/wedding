@@ -4,11 +4,10 @@ import React from 'react';
 import { Button } from '@nextui-org/react';
 import NextImage from 'next/image';
 
-import leftFlower1 from '../assets/left-flower-1.png';
-import leftFlower2 from '../assets/left-flower-2.png';
-
-import Section, { Center } from './section';
-import Body from './body';
+import leftFlower1 from '../..//assets/left-flower-1.png';
+import leftFlower2 from '../../assets/left-flower-2.png';
+import Section, { Center } from '../section';
+import Body from '../body';
 
 function InviteSection() {
   return (
