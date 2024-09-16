@@ -23,10 +23,11 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   openGraph: {
+    siteName: '¡Nos Casamos! Federico & Camila',
     title: '¡Nos Casamos! Federico & Camila',
     description:
       'Unite a la celebración de nuestro casamiento. Encontrá toda la información sobre la ceremonia, recepción, y otros detalles importantes.',
-    url: '/',
+    url: 'noscasamos.camiyfede.com',
     images: [
       {
         url: '/cover.jpg',
