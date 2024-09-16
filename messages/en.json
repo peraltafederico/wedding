@@ -8,5 +8,21 @@
     "part1": "In the days of Facebook, we met through a ¨Like,¨ on those song statuses people used to post on their walls. Our paths crossed as teenagers, we grew up together, and over the course of these 10 years, we built a beautiful relationship of companionship, friendship, love, and respect. Today, we want to celebrate the love we have for each other with the people who have been, and continue to be, an important part of our lives.",
     "part2": "And you are one of them.",
     "footer": "Ready to be part of our celebration?"
+  },
+  "info": {
+    "date": {
+      "title": "Date and Time",
+      "date": "November 17th, 2024",
+      "time": "5:30 PM"
+    },
+    "dress": {
+      "title": "Dress Code",
+      "description": "Elegant"
+    },
+    "location": {
+      "title": "Location",
+      "description": "Quinta de Benavidez",
+      "address": "Mendoza 3499, Benavidez, Bs.As"
+    }
   }
 }
