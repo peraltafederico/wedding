@@ -10,6 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: '#939369',
+          text: '#FFFFFF',
+        },
         offWhite: '#FAF9F6',
         mossGreen: '#939369',
       },

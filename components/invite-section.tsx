@@ -30,9 +30,11 @@ function InviteSection() {
           className='!gap-0'
           cta={{
             component: (
-              <Button className='bg-mossGreen text-white font-bold w-button w-full md:w-auto' size='lg'>
-                Confirmar Asistencia
-              </Button>
+              <>
+                <Button className='font-bold w-button w-full md:w-auto' color='primary' size='lg'>
+                  Confirmar Asistencia
+                </Button>
+              </>
             ),
             className: 'mt-0',
           }}
