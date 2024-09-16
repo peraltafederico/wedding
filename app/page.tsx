@@ -6,10 +6,12 @@ import UsSection from '../components/sections/us-section';
 import InfoSection from '../components/sections/info-section';
 import GiftSection from '../components/sections/gift-section';
 import InviteSection from '../components/invite-section';
+import Config from '../components/config';
 
 export default function Home() {
   return (
     <>
+      <Config />
       <CoverSection />
       <HistorySection />
       <UsSection />
