@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: '¡Nos Casamos! Federico & Camila',
     description:
       'Unite a la celebración de nuestro casamiento. Encontrá toda la información sobre la ceremonia, recepción, y otros detalles importantes.',
-    url: 'noscasamos.camiyfede.com',
+    url: 'https://noscasamos.camiyfede.com',
     images: [
       {
         url: '/cover.jpg',
