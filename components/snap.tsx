@@ -17,7 +17,7 @@ function Snap({ children }: Props) {
       render={() => {
         return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
       }}
-      scrollingSpeed={1000}
+      scrollingSpeed={500}
       verticalCentered={false}
     />
   );
