@@ -10,7 +10,7 @@ function Config() {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
   const [isSound, setIsSound] = useState(false);
-  const [audio] = useState(new Audio('/audio/song.mp3'));
+  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/audio/song.mp3') : null);
 
   const handleTheme = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
@@ -19,10 +19,10 @@ function Config() {
   const handleSound = () => {
     if (isSound) {
       setIsSound(!isSound);
-      audio.pause();
+      audio?.pause();
     } else {
       setIsSound(!isSound);
-      audio.play();
+      audio?.play();
     }
   };
 
