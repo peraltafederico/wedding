@@ -29,5 +29,9 @@
     "title": "We are excited to celebrate with you",
     "description": "Your presence is already a priceless gift. If you would like to send us an additional gift, please help us with our...",
     "cta": "Honeymoon"
+  },
+  "invite": {
+    "title": "We are counting on you!",
+    "cta": "Confirm Attendance"
   }
 }

@@ -1,15 +1,17 @@
-'use client';
-
 import React from 'react';
 import { Button } from '@nextui-org/react';
 import NextImage from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import leftFlower1 from '../..//assets/left-flower-1.png';
 import leftFlower2 from '../../assets/left-flower-2.png';
 import Section, { Center } from '../section';
 import Body from '../body';
+import InviteCTA from '../invite-cta';
 
 function InviteSection() {
+  const t = useTranslations('invite');
+
   return (
     <Section>
       <Center>
@@ -28,23 +30,11 @@ function InviteSection() {
         <Body
           className='!gap-0'
           cta={{
-            component: (
-              <>
-                <Button
-                  as={'a'}
-                  className='font-bold w-button w-full md:w-auto'
-                  color='primary'
-                  href='https://docs.google.com/forms/d/1jcMBC6Rhw_JDOkxwRukwnl60YiZH5GtSBg1TGEQJbOE'
-                  size='lg'
-                  target='_blank'>
-                  Confirmar Asistencia
-                </Button>
-              </>
-            ),
+            component: <InviteCTA text={t('cta')} />,
             className: 'mt-0',
           }}
           title={{
-            text: `¡Contamos con vos!`,
+            text: t('title'),
           }}
         />
       </Center>

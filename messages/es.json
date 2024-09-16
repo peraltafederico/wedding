@@ -29,5 +29,9 @@
     "title": "Estamos ansiosos de celebrarlo juntogalos",
     "description": "Tu presencia ya es un regalo que no tiene precio. Si adicionalmente quieres enviarnos algún detalle ayudanos con nuestra...",
     "cta": "Luna de miel"
+  },
+  "invite": {
+    "title": "¡Contamos con vos!",
+    "cta": "Confirmar Asistencia"
   }
 }

@@ -9,7 +9,7 @@ import Body from '../body';
 import GiftTrigger from '../gift-trigger';
 
 function GiftSection() {
-  const t = useTranslations();
+  const t = useTranslations('gift');
 
   return (
     <>
@@ -29,13 +29,13 @@ function GiftSection() {
         /> */}
           <Body
             body={{
-              text: t('gift.description'),
+              text: t('description'),
             }}
             cta={{
-              component: <GiftTrigger text={t('gift.cta')} />,
+              component: <GiftTrigger text={t('cta')} />,
             }}
             title={{
-              text: t('gift.title'),
+              text: t('title'),
             }}
           />
         </Center>
