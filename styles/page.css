@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-section {
+.section {
   min-height: 100svh !important;
   height: 100svh !important;
   max-height: 100svh !important;
