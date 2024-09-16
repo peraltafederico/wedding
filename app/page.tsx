@@ -16,7 +16,7 @@ export default function Home() {
       <HistorySection />
       <UsSection />
       <InfoSection />
-      {/* <GiftSection /> */}
+      <GiftSection />
       {/* <InviteSection /> */}
     </>
   );
