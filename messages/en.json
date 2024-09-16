@@ -28,7 +28,12 @@
   "gift": {
     "title": "We are excited to celebrate with you",
     "description": "Your presence is already a priceless gift. If you would like to send us an additional gift, please help us with our...",
-    "cta": "Honeymoon"
+    "cta": "Honeymoon",
+    "modal": {
+      "title": "Thank you for your gift!",
+      "note": "If you prefer to give us your gift on the day of our wedding, you will find a piggy bank at the entrance of the ceremony.",
+      "cta": "Back"
+    }
   },
   "invite": {
     "title": "We are counting on you!",
