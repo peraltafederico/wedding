@@ -24,5 +24,10 @@
       "description": "Quinta de Benavidez",
       "address": "Mendoza 3499, Benavidez, Bs.As"
     }
+  },
+  "gift": {
+    "title": "Estamos ansiosos de celebrarlo juntogalos",
+    "description": "Tu presencia ya es un regalo que no tiene precio. Si adicionalmente quieres enviarnos algún detalle ayudanos con nuestra...",
+    "cta": "Luna de miel"
   }
 }
