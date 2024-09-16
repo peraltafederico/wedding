@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import AOSinit from '../components/aos';
 import Snap from '../components/snap';
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           youngSerif.variable
         )}>
         <Analytics />
+        <SpeedInsights />
         <AOSinit />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           {/* <Navbar /> */}
