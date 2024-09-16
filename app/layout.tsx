@@ -76,8 +76,8 @@ export const metadata: Metadata = {
     '17 de noviembre 2024',
     'quinta de benavidez',
   ],
-  themeColor: '#f5a623',
 };
+
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
