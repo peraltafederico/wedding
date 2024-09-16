@@ -19,7 +19,7 @@ function GiftModal({ isOpen, onOpenChange }: Props) {
         {onClose => (
           <>
             <ModalHeader className='flex flex-col gap-1 md:text-[1.125em] md:py-[1em] md:px-[1.5em]'>
-              Gracias por tu regalo!
+              ¡Gracias por tu regalo!
             </ModalHeader>
             <ModalBody className='md:py-[0.5em] md:px-[1.5em]'>
               <div>
@@ -30,7 +30,7 @@ function GiftModal({ isOpen, onOpenChange }: Props) {
               <Divider />
               <p>
                 Si preferís hacernos tu presente el día de nuestra boda vas a disponer de una alcancía en la entrada de
-                la ceremonia! \uD83D\uDC95
+                la ceremonia. \uD83D\uDC95
               </p>
             </ModalBody>
             <ModalFooter className='md:py-[1em] md:px-[1.5em]'>
