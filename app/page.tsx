@@ -17,7 +17,7 @@ export default function Home() {
       <UsSection />
       <InfoSection />
       <GiftSection />
-      {/* <InviteSection /> */}
+      <InviteSection />
     </>
   );
 }
