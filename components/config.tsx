@@ -44,13 +44,13 @@ function Config() {
     <div className='fixed z-10 right-0'>
       <div className='p-2 flex gap-3'>
         <FontAwesomeIcon
-          className='w-5 md:w-3 text-light select-none'
+          className='w-5 md:w-3 text-light select-none transition-all duration-300'
           icon={isSound ? faVolumeMute : faVolumeHigh}
           role='button'
           onClick={handleSound}
         />
         <FontAwesomeIcon
-          className='w-3 md:w-2 text-light select-none'
+          className='w-3 md:w-2 text-light select-none transition-all duration-300'
           icon={isLight ? faMoon : faSun}
           role='button'
           onClick={handleTheme}
