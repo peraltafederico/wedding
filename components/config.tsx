@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute, faLanguage, faMoon, faSun, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { useIsSSR } from '@react-aria/ssr';
 import { useTheme } from 'next-themes';
+import clsx from 'clsx';
 
 import { Locale } from '../i18n/config';
 import { getUserLocale, setUserLocale } from '../services/locale';
@@ -14,7 +15,7 @@ function Config() {
   const isSSR = useIsSSR();
   const [isSound, setIsSound] = useState(false);
   const [audio] = useState(typeof window !== 'undefined' ? new Audio('/audio/song.mp3') : null);
-  const [_isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   function handleLanguage() {
     startTransition(async () => {
@@ -55,7 +56,11 @@ function Config() {
           onClick={handleTheme}
         />
         <FontAwesomeIcon
-          className='w-5 md:w-4 text-light select-none'
+          className={clsx('w-5 md:w-4 text-light select-none', {
+            'opacity-50': isPending,
+            'cursor-not-allowed': isPending,
+            'transition-all duration-300': !isPending,
+          })}
           icon={faLanguage}
           role='button'
           onClick={handleLanguage}
