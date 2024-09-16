@@ -1,10 +1,8 @@
-'use client';
-
 import React from 'react';
 import NextImage from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import Section, { Center } from '../section';
-
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import date from '../../assets/date.png';
@@ -34,6 +32,8 @@ function Info({ children, description, title }: InfoProps) {
 }
 
 function InfoSection() {
+  const t = useTranslations('info');
+
   return (
     <Section className='flex justify-center'>
       <Center className='flex flex-col items-center'>
@@ -50,12 +50,12 @@ function InfoSection() {
               position: 'absolute',
             }}
           /> */}
-          <Info description='17 de Noviembre 2024' title='Fecha y hora'>
-            <span className='font-whiteStar text-mossGreen'>17:30 hs</span>
+          <Info description={t('date.date')} title={t('date.title')}>
+            <span className='font-whiteStar text-mossGreen'>{t('date.time')}</span>
           </Info>
-          <Info description='Elegante' title='Dress Code' />
-          <Info description='Quinta de Benavidez' title='Lugar'>
-            <span className='text-xs mt-2'>Mendoza 3499, Benavidez, Bs.As</span>
+          <Info description={t('dress.description')} title={t('dress.title')} />
+          <Info description={t('location.description')} title={t('location.title')}>
+            <span className='text-xs mt-2'>{t('location.address')}</span>
           </Info>
           {/* <Info description='@noscasamos.camiyfede' title='Instagram' /> */}
         </div>
