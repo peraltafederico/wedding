@@ -14,10 +14,10 @@ export default function Home() {
       <Config />
       <CoverSection />
       <HistorySection />
-      <UsSection />
-      <InfoSection />
-      <GiftSection />
-      <InviteSection />
+      {/* <UsSection /> */}
+      {/* <InfoSection /> */}
+      {/* <GiftSection /> */}
+      {/* <InviteSection /> */}
     </>
   );
 }

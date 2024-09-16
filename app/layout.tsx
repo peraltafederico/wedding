@@ -3,6 +3,8 @@ import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { getLocale, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 
 import AOSinit from '../components/aos';
 import Snap from '../components/snap';
@@ -85,9 +87,15 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <html suppressHydrationWarning lang='en'>
+    <html suppressHydrationWarning lang={locale}>
       <head />
       <body
         className={clsx(
@@ -100,7 +108,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SpeedInsights />
         <AOSinit />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <Snap>{children}</Snap>
+          <Snap>
+            <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+          </Snap>
         </Providers>
       </body>
     </html>
