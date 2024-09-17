@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useTransition } from 'react';
+import React, { useRef, useState, useTransition } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute, faLanguage, faMoon, faSun, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { useIsSSR } from '@react-aria/ssr';
@@ -14,7 +14,7 @@ function Config() {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
   const [isSound, setIsSound] = useState(false);
-  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/audio/song.mp3') : null);
+  const audio = useRef(typeof window !== 'undefined' ? new Audio('/audio/song.mp3') : null);
   const [isPending, startTransition] = useTransition();
 
   function handleLanguage() {
@@ -31,10 +31,10 @@ function Config() {
   const handleSound = () => {
     if (isSound) {
       setIsSound(!isSound);
-      audio?.pause();
+      audio.current?.pause();
     } else {
       setIsSound(!isSound);
-      audio?.play();
+      audio.current?.play();
     }
   };
 
