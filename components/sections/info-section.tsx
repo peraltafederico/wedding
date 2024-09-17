@@ -66,7 +66,7 @@ function InfoSection() {
           <Info delay={100} description={t('date.date')} title={t('date.title')}>
             <span className='font-whiteStar text-mossGreen'>{t('date.time')}</span>
           </Info>
-          <Info delay={300} description={t('location.description')} title={t('location.title')}>
+          <Info delay={200} description={t('location.description')} title={t('location.title')}>
             <Button
               as='a'
               className='text-xs mt-1 hidden md:flex'
@@ -86,7 +86,7 @@ function InfoSection() {
               {t('location.address')}
             </Button>
           </Info>
-          <Info delay={200} description={t('dress.description')} title={t('dress.title')} />
+          <Info delay={300} description={t('dress.description')} title={t('dress.title')} />
           <Info
             className='hidden md:flex'
             delay={400}
