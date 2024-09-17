@@ -4,8 +4,6 @@ import 'swiper/css/effect-fade';
 
 import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 
@@ -108,8 +106,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           starWhite.variable,
           youngSerif.variable
         )}>
-        <Analytics />
-        <SpeedInsights />
         <AOSinit />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           <Snap>
