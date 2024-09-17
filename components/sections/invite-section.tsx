@@ -1,6 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Button } from '@nextui-org/react';
-import NextImage from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import leftFlower1 from '../..//assets/left-flower-1.png';
@@ -27,7 +27,11 @@ function InviteSection() {
             width: '300px',
           }}
         /> */}
+        <div />
         <Body
+          body={{
+            text: t('description'),
+          }}
           className='!gap-0'
           cta={{
             component: <InviteCTA text={t('cta')} />,
@@ -37,6 +41,13 @@ function InviteSection() {
             text: t('title'),
           }}
         />
+        <a
+          className='absolute bottom-[10px] right-[10px] text-sm animate-bouceSlow font-whiteStar text-mossGreen'
+          href='https://www.instagram.com/noscasamos.camiyfede'
+          rel='noreferrer'
+          target='_blank'>
+          @noscasamos.camiyfede
+        </a>
       </Center>
     </Section>
   );

@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        bouceSlow: 'bounce 2s infinite',
+      },
       colors: {
         primary: {
           DEFAULT: '#939369',
