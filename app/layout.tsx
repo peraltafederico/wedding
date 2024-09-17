@@ -1,4 +1,7 @@
 import '@/styles/globals.css';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+
 import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
 import { Analytics } from '@vercel/analytics/react';

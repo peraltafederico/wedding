@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards } from 'swiper/modules';
 import NextImage from 'next/image';
 
 import slide1 from '../../assets/slide1.jpg';
@@ -16,7 +15,7 @@ import 'swiper/css/effect-cards';
 function UsSection() {
   return (
     <Section className='us-slider'>
-      <Center fullWide>
+      <Center fullWide data-aos='fade-up'>
         {/* <NextImage
         alt='Default Image'
         src={simpleFlower}

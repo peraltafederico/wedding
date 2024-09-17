@@ -3,31 +3,40 @@
 import React from 'react';
 import NextImage from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade, Autoplay } from 'swiper/modules';
 
 import cover from '../../assets/cover.jpg';
+import cover1 from '../../assets/slide1.jpg';
 import Section from '../section';
 
 function CoverSection() {
   const t = useTranslations('cover');
 
   return (
-    <Section>
-      <NextImage
-        fill
-        alt='Default Image'
-        src={cover}
-        style={{
-          backgroundPositionY: 'center',
-          objectFit: 'cover',
-        }}
-      />
-      <div className='w-full h-full'>
+    <Section className='cover-slider'>
+      <div className='w-full h-full z-20'>
         <div className='absolute bottom-[-20px] font-whiteStar flex text-center text-2xl flex-col mt-auto text-white w-full mb-8 gap-6'>
           <h1 className='leading-snug'>{t('title')}</h1>
           <h1 className='leading-snug'>{t('subtitle')}</h1>
         </div>
       </div>
-      <div />
+      <Swiper
+        grabCursor
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+          stopOnLastSlide: true,
+        }}
+        effect={'fade'}
+        modules={[EffectFade, Autoplay]}
+        slidesPerView='auto'>
+        {[cover, cover1].map(slide => (
+          <SwiperSlide key={slide.src}>
+            <NextImage fill alt='Default Image' src={slide} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Section>
   );
 }
