@@ -3,8 +3,6 @@ import NextImage from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import Section, { Center } from '../section';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
 import date from '../../assets/date.png';
 import simpleFlower from '../../assets/simple-flower.png';
 
@@ -12,11 +10,12 @@ type InfoProps = {
   children?: React.ReactNode;
   title: string;
   description: string;
+  delay?: number;
 };
 
-function Info({ children, description, title }: InfoProps) {
+function Info({ children, description, title, delay }: InfoProps) {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center' data-aos='fade-up' data-aos-delay={delay}>
       <div className='w-[100px]'>
         <NextImage alt='Date Icon' src={date} />
       </div>
@@ -50,11 +49,11 @@ function InfoSection() {
               position: 'absolute',
             }}
           /> */}
-          <Info description={t('date.date')} title={t('date.title')}>
+          <Info delay={100} description={t('date.date')} title={t('date.title')}>
             <span className='font-whiteStar text-mossGreen'>{t('date.time')}</span>
           </Info>
-          <Info description={t('dress.description')} title={t('dress.title')} />
-          <Info description={t('location.description')} title={t('location.title')}>
+          <Info delay={200} description={t('dress.description')} title={t('dress.title')} />
+          <Info delay={300} description={t('location.description')} title={t('location.title')}>
             <span className='text-xs mt-2'>{t('location.address')}</span>
           </Info>
           {/* <Info description='@noscasamos.camiyfede' title='Instagram' /> */}
