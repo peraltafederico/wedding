@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
 import NextImage from 'next/image';
 
-import simpleFlower from '../assets/simple-flower.png';
+import slide1 from '../../assets/slide1.jpg';
+import slide2 from '../../assets/slide2.jpg';
+import slide3 from '../../assets/slide3.jpg';
 import Section, { Center } from '../section';
 
 import 'swiper/css';
@@ -13,8 +15,8 @@ import 'swiper/css/effect-cards';
 
 function UsSection() {
   return (
-    <Section>
-      <Center>
+    <Section className='us-slider'>
+      <Center fullWide>
         {/* <NextImage
         alt='Default Image'
         src={simpleFlower}
@@ -25,10 +27,28 @@ function UsSection() {
           position: 'absolute',
         }}
       /> */}
-        <Swiper className='mySwiper' effect={'cards'} grabCursor={true} modules={[EffectCards]}>
-          <SwiperSlide className={`bg-[url('/slide1.jpg')] bg-center bg-cover`} />
-          <SwiperSlide className={`bg-[url('/slide2.jpg')] bg-center bg-cover`} />
-          <SwiperSlide className={`bg-[url('/slide3.jpg')] bg-center bg-cover`} />
+        <Swiper
+          centeredSlides
+          grabCursor
+          loop
+          loopAddBlankSlides
+          breakpoints={{
+            0: {
+              spaceBetween: 24,
+            },
+            512: {
+              spaceBetween: 32,
+            },
+            1024: {
+              spaceBetween: 64,
+            },
+          }}
+          slidesPerView='auto'>
+          {[slide1, slide2, slide3, slide1, slide2, slide3].map(slide => (
+            <SwiperSlide key={slide.src}>
+              <NextImage fill alt='Default Image' src={slide} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Center>
     </Section>

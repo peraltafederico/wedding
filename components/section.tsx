@@ -3,10 +3,10 @@ import clsx from 'clsx';
 type Props = {
   children: React.ReactNode;
   className?: string;
-  fullScreen?: boolean;
+  fullWide?: boolean;
 };
 
-function Section({ children, fullScreen, className }: Props) {
+function Section({ children, className }: Props) {
   return (
     <section
       className={clsx(
@@ -19,9 +19,14 @@ function Section({ children, fullScreen, className }: Props) {
   );
 }
 
-function Center({ children, className }: Props) {
+function Center({ children, className, fullWide }: Props) {
   return (
-    <div className={clsx('flex justify-center items-center relative w-full px-4 flex-col', className)}>{children}</div>
+    <div
+      className={clsx('flex justify-center items-center relative w-full px-4 flex-col', className, {
+        '!px-0': fullWide,
+      })}>
+      {children}
+    </div>
   );
 }
 
