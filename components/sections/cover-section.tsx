@@ -17,8 +17,10 @@ function CoverSection() {
     <Section className='cover-slider'>
       <div className='w-full h-full z-20'>
         <div className='absolute bottom-[-20px] font-whiteStar flex text-center text-2xl flex-col mt-auto text-white w-full mb-8 gap-6'>
-          <h1 className='leading-snug'>{t('title')}</h1>
-          <h1 className='leading-snug'>{t('subtitle')}</h1>
+          <h1 className='leading-snug'>
+            <span className='block mb-6'>{t('title')}</span>
+            <span className='block'>{t('subtitle')}</span>
+          </h1>
         </div>
       </div>
       <Swiper
