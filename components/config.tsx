@@ -9,6 +9,7 @@ import clsx from 'clsx';
 
 import { Locale } from '../i18n/config';
 import { getUserLocale, setUserLocale } from '../services/locale';
+import { track } from '../utils/mixpanel';
 
 function Config() {
   const { theme, setTheme } = useTheme();
@@ -20,19 +21,31 @@ function Config() {
   function handleLanguage() {
     startTransition(async () => {
       const locale = (await getUserLocale()) as Locale;
+      const l = locale === 'en' ? 'es' : 'en';
 
-      setUserLocale(locale === 'en' ? 'es' : 'en');
+      track('Change Language', {
+        locale: l,
+      });
+
+      setUserLocale(l);
     });
   }
   const handleTheme = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
+    const t = theme === 'light' ? 'dark' : 'light';
+
+    track('Change Theme', {
+      theme: t,
+    });
+    setTheme(t);
   };
 
   const handleSound = () => {
     if (isSound) {
+      track('Mute Song');
       setIsSound(!isSound);
       audio.current?.pause();
     } else {
+      track('Play Song');
       setIsSound(!isSound);
       audio.current?.play();
     }

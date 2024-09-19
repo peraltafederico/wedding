@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import toast from 'react-hot-toast';
 
+import { track } from '../utils/mixpanel';
+
 type Props = {
   isOpen: boolean;
   onOpenChange: (open: boolean) => void;
@@ -16,7 +18,10 @@ const CVU = '0000003100067378552623';
 function GiftModal({ isOpen, onOpenChange }: Props) {
   const t = useTranslations('gift.modal');
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (text: string, origin: string) => {
+    track('Copy to Clipboard', {
+      origin,
+    });
     navigator.clipboard.writeText(text);
     toast(<p className='text-sm md:text-[.8vw] leading-tigh'>{t('copied')}</p>, {
       position: 'bottom-right',
@@ -48,7 +53,7 @@ function GiftModal({ isOpen, onOpenChange }: Props) {
                     icon={faCopy}
                     role='button'
                     size='sm'
-                    onClick={() => handleCopy(CVU)}
+                    onClick={() => handleCopy(CVU, 'CVU')}
                   />
                 </div>
                 <div className='flex gap-0.5 items-center'>
@@ -58,7 +63,7 @@ function GiftModal({ isOpen, onOpenChange }: Props) {
                     icon={faCopy}
                     role='button'
                     size='sm'
-                    onClick={() => handleCopy(ALIAS)}
+                    onClick={() => handleCopy(ALIAS, 'Alias')}
                   />
                 </div>
               </div>

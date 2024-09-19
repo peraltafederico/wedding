@@ -93,11 +93,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const messages = await getMessages();
 
   return (
-    <html suppressHydrationWarning lang={locale}>
+    <html
+      suppressHydrationWarning
+      className='scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded-full'
+      lang={locale}>
       <head />
       <body
         className={clsx(
-          ' bg-background font-sans antialiased ',
+          'bg-background font-sans antialiased',
           fontSans.variable,
           starWhite.variable,
           youngSerif.variable

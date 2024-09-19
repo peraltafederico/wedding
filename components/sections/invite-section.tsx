@@ -42,7 +42,7 @@ function InviteSection() {
           }}
         />
         <a
-          className='absolute bottom-[10px] right-[10px] text-sm animate-bouceSlow font-whiteStar text-mossGreen'
+          className='absolute bottom-[25px] right-[20px] text-sm animate-bouceSlow font-whiteStar text-mossGreen'
           href='https://www.instagram.com/noscasamos.camiyfede'
           rel='noreferrer'
           target='_blank'>
