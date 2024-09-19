@@ -3,7 +3,8 @@ import NextImage from 'next/image';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
-import leftFlower2 from '../assets/left-flower-2.png';
+import leftFlower1 from '../../assets/left-flower-1.png';
+import rightFlower1 from '../../assets/right-flower-1.png';
 import Section, { Center } from '../section';
 import Body from '../body';
 
@@ -13,19 +14,16 @@ function HistorySection() {
   return (
     <Section>
       <Center>
-        {/* <NextImage
-        alt='Default Image'
-          src={leftFlower2}
-          style={{
-            opacity: 0.25,
-            position: 'absolute',
-            left: -180,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            maxWidth: 'unset',
-            width: '300px',
-          }}
-        /> */}
+        <NextImage
+          alt='Default Image'
+          className='opacity-25 absolute left-[-4rem] top-[50%] transform -translate-y-1/2 w-[10rem] max-w-none md:w-[10rem] md:opacity-100'
+          src={leftFlower1}
+        />
+        <NextImage
+          alt='Default Image'
+          className='opacity-25 absolute right-[-4rem] top-[50%] transform -translate-y-1/2 w-[10rem] max-w-none md:w-[10rem] md:opacity-100'
+          src={rightFlower1}
+        />
         <Body
           body={{
             text: (
