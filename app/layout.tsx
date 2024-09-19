@@ -14,16 +14,16 @@ import { Providers } from './providers';
 import { fontSans, starWhite, youngSerif } from '@/config/fonts';
 export const metadata: Metadata = {
   title: {
-    default: '¡Nos Casamos! Federico & Camila',
-    template: `%s | ¡Nos Casamos! Federico & Camila`,
+    default: '¡Nos Casamos! Cami & Fede',
+    template: `%s | ¡Nos Casamos! Cami & Fede`,
   },
   description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    siteName: '¡Nos Casamos! Federico & Camila',
-    title: '¡Nos Casamos! Federico & Camila',
+    siteName: '¡Nos Casamos! Cami & Fede',
+    title: '¡Nos Casamos! Cami & Fede',
     description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
     url: 'https://noscasamos.camiyfede.com',
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@_pfederico',
     description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
-    title: '¡Nos Casamos! Federico & Camila',
+    title: '¡Nos Casamos! Cami & Fede',
     images: [
       {
         url: '/cover.jpg',
