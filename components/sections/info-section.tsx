@@ -21,8 +21,8 @@ type InfoProps = {
 
 function Info({ children, description, title, delay, className }: InfoProps) {
   return (
-    <div className={clsx('flex flex-col items-center', className)} data-aos='fade-up' data-aos-delay={delay}>
-      <div className='w-[100px]'>
+    <div className={clsx('flex flex-col items-center info-item', className)} data-aos='fade-up' data-aos-delay={delay}>
+      <div className='w-[100px] info-img-wrapper'>
         <NextImage
           alt='Date Icon'
           src={date}
@@ -48,7 +48,7 @@ function InfoSection() {
   return (
     <Section className='flex justify-center'>
       <Center className='flex flex-col items-center'>
-        <div className='relative w-fit md:grid flex flex-col md:grid-cols-2 md:grid-rows-2 md:gap-x-24 md:gap-y-12'>
+        <div className='relative w-fit md:grid flex flex-col md:grid-cols-2 md:grid-rows-2 md:gap-x-24 md:gap-y-12 info-container'>
           {/* <NextImage
             alt='Default Image'
             src={simpleFlower}
