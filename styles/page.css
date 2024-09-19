@@ -91,4 +91,9 @@
     width: 50px;
     display: flex;
   }
+
+  .info-item {
+    opacity: initial;
+    transform: initial;
+  }
 }
