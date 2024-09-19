@@ -70,3 +70,25 @@
 .cover-slider .swiper-slide img {
   object-fit: cover;
 }
+
+@media screen and (max-height: 400px) {
+  .info-img-wrapper {
+    display: none;
+  }
+
+  .info-container {
+    gap: 16px;
+  }
+
+  .info-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media screen and (max-height: 400px) and (min-width: 768px) {
+  .info-img-wrapper {
+    width: 50px;
+    display: flex;
+  }
+}
