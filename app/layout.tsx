@@ -106,7 +106,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           youngSerif.variable
         )}>
         <AOSinit />
-        <Providers themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
+        <Providers locale={locale} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
           <Snap>
             <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
           </Snap>

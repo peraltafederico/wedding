@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useRef, useState, useTransition } from 'react';
+import React, { useContext, useRef, useState, useTransition } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute, faLanguage, faMoon, faSun, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { useIsSSR } from '@react-aria/ssr';
 import { useTheme } from 'next-themes';
 import clsx from 'clsx';
 
-import { Locale } from '../i18n/config';
-import { getUserLocale, setUserLocale } from '../services/locale';
+import { setUserLocale } from '../services/locale';
 import { track } from '../utils/mixpanel';
+import { LocaleContext } from '../app/providers';
 
 function Config() {
   const { theme, setTheme } = useTheme();
@@ -17,10 +17,10 @@ function Config() {
   const [isSound, setIsSound] = useState(false);
   const audio = useRef(typeof window !== 'undefined' ? new Audio('/audio/song.mp3') : null);
   const [isPending, startTransition] = useTransition();
+  const locale = useContext(LocaleContext);
 
   function handleLanguage() {
     startTransition(async () => {
-      const locale = (await getUserLocale()) as Locale;
       const l = locale === 'en' ? 'es' : 'en';
 
       track('Change Language', {

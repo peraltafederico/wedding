@@ -12,9 +12,11 @@ import { useEffect } from 'react';
 export interface ProvidersProps {
   children: React.ReactNode;
   themeProps?: ThemeProviderProps;
+  locale: string;
 }
+export const LocaleContext = React.createContext<string>('es');
 
-export function Providers({ children, themeProps }: ProvidersProps) {
+export function Providers({ children, themeProps, locale }: ProvidersProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -25,13 +27,13 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   }, []);
 
   return (
-    <>
+    <LocaleContext.Provider value={locale}>
       <NextUIProvider navigate={router.push}>
         <NextThemesProvider {...themeProps}>
           {children}
           <Toaster />
         </NextThemesProvider>
       </NextUIProvider>
-    </>
+    </LocaleContext.Provider>
   );
 }
