@@ -23,7 +23,7 @@ function GiftModal({ isOpen, onOpenChange }: Props) {
       origin,
     });
     navigator.clipboard.writeText(text);
-    toast(<p className='text-sm md:text-[.8vw] leading-tigh'>{t('copied')}</p>, {
+    toast(<p className='text-sm md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw] leading-tigh'>{t('copied')}</p>, {
       position: 'bottom-right',
       className: `!bg-content1 !text-inherit`,
     });
