@@ -32,7 +32,8 @@
     "modal": {
       "title": "Thank you for your gift!",
       "note": "If you prefer to give us your gift on the day of our wedding, you will find a piggy bank at the entrance of the ceremony.",
-      "cta": "Back"
+      "cta": "Back",
+      "copied": "Copied!"
     }
   },
   "invite": {
