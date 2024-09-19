@@ -1,7 +1,6 @@
 import '@/styles/globals.css';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-
 import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -18,38 +17,35 @@ export const metadata: Metadata = {
     default: '¡Nos Casamos! Federico & Camila',
     template: `%s | ¡Nos Casamos! Federico & Camila`,
   },
-  description:
-    'Acompañanos en nuestro día más especial mientras celebramos nuestra boda. Detalles sobre la ceremonia, el lugar y mucho más.',
+  description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     siteName: '¡Nos Casamos! Federico & Camila',
     title: '¡Nos Casamos! Federico & Camila',
-    description:
-      'Unite a la celebración de nuestro casamiento. Encontrá toda la información sobre la ceremonia, recepción, y otros detalles importantes.',
+    description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
     url: 'https://noscasamos.camiyfede.com',
     images: [
       {
         url: '/cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'Imagen del Casamiento de Federico y Camila',
+        alt: 'Cami y Fede',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@_pfederico',
-    description:
-      'Acompañanos en nuestro día más especial mientras celebramos nuestra boda. Detalles sobre la ceremonia, el lugar y mucho más.',
+    description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
     title: '¡Nos Casamos! Federico & Camila',
     images: [
       {
         url: '/cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'Imagen del Casamiento de Federico y Camila',
+        alt: 'Cami y Fede',
       },
     ],
   },

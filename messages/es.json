@@ -32,7 +32,8 @@
     "modal": {
       "title": "¡Gracias por tu regalo!",
       "note": "Si preferís hacernos tu presente el día de nuestra boda vas a disponer de una alcancía en la entrada de la ceremonia. ",
-      "cta": "Volver"
+      "cta": "Volver",
+      "copied": "Copiado!"
     }
   },
   "invite": {
