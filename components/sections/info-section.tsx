@@ -10,6 +10,7 @@ import { Link } from '@nextui-org/react';
 import Section, { Center } from '../section';
 import date from '../../assets/date.png';
 import simpleFlower from '../../assets/simple-flower.png';
+import { track } from '../../utils/mixpanel';
 
 type InfoProps = {
   children?: React.ReactNode;
@@ -44,6 +45,15 @@ function Info({ children, description, title, delay, className }: InfoProps) {
 
 function InfoSection() {
   const t = useTranslations('info');
+  const handleAddress = () => {
+    track('Address');
+  };
+
+  const handleInstagram = () => {
+    track('Instagram', {
+      section: 'Info',
+    });
+  };
 
   return (
     <Section className='flex justify-center'>
@@ -73,7 +83,8 @@ function InfoSection() {
               href='https://www.google.com/maps/place/Mendoza+3499,+B1621CDG+Benavidez,+Provincia+de+Buenos+Aires/@-34.4166203,-58.7144082,1065m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bca194caa79cbb:0x49567f11cd2e5506!8m2!3d-34.4166203!4d-58.7144082!16s%2Fg%2F11f3sj5133?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D'
               size='sm'
               target='_blank'
-              variant='light'>
+              variant='light'
+              onClick={handleAddress}>
               {t('location.address')}
             </Button>
             <Button
@@ -82,7 +93,8 @@ function InfoSection() {
               href='https://www.google.com/maps/place/Mendoza+3499,+B1621CDG+Benavidez,+Provincia+de+Buenos+Aires/@-34.4166203,-58.7144082,1065m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bca194caa79cbb:0x49567f11cd2e5506!8m2!3d-34.4166203!4d-58.7144082!16s%2Fg%2F11f3sj5133?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D'
               size='sm'
               target='_blank'
-              variant='flat'>
+              variant='flat'
+              onClick={handleAddress}>
               {t('location.address')}
             </Button>
           </Info>
@@ -99,7 +111,8 @@ function InfoSection() {
                   rel='noreferrer'
                   size='sm'
                   target='_blank'
-                  variant='light'>
+                  variant='light'
+                  onClick={handleInstagram}>
                   @noscasamos.camiyfede
                 </Button>
               </>

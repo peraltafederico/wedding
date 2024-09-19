@@ -8,9 +8,15 @@ import leftFlower2 from '../../assets/left-flower-2.png';
 import Section, { Center } from '../section';
 import Body from '../body';
 import InviteCTA from '../invite-cta';
+import { track } from '../../utils/mixpanel';
 
 function InviteSection() {
   const t = useTranslations('invite');
+  const handleInstagram = () => {
+    track('Instagram', {
+      section: 'Info',
+    });
+  };
 
   return (
     <Section>
@@ -45,7 +51,8 @@ function InviteSection() {
           className='absolute bottom-[25px] right-[20px] text-sm animate-bouceSlow font-whiteStar text-mossGreen'
           href='https://www.instagram.com/noscasamos.camiyfede'
           rel='noreferrer'
-          target='_blank'>
+          target='_blank'
+          onClick={handleInstagram}>
           @noscasamos.camiyfede
         </a>
       </Center>
