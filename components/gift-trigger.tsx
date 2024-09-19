@@ -3,6 +3,7 @@
 import { Button, useDisclosure } from '@nextui-org/react';
 
 import { triggerConfetti } from '../utils/confetti';
+import { track } from '../utils/mixpanel';
 
 import GiftModal from './gift-modal';
 
@@ -14,6 +15,7 @@ function GiftTrigger({ text }: Props) {
   const { onOpen, isOpen, onOpenChange } = useDisclosure();
 
   const handleClick = () => {
+    track('Open Gift Modal');
     onOpen();
     triggerConfetti();
   };
