@@ -16,12 +16,12 @@ function HistorySection() {
       <Center>
         <NextImage
           alt='Default Image'
-          className='opacity-25 absolute left-[-4rem] top-[50%] transform -translate-y-1/2 w-[10rem] max-w-none md:w-[10rem] md:opacity-100'
+          className='opacity-25 absolute left-[-4rem] top-[50%] transform -translate-y-1/2 w-[10rem] max-w-none md:opacity-100'
           src={leftFlower1}
         />
         <NextImage
           alt='Default Image'
-          className='opacity-25 absolute right-[-4rem] top-[50%] transform -translate-y-1/2 w-[10rem] max-w-none md:w-[10rem] md:opacity-100 hidden sm:block'
+          className='opacity-25 absolute right-[-4rem] top-[50%] transform -translate-y-1/2 w-[10rem] max-w-none md:opacity-100 hidden sm:block'
           src={rightFlower1}
         />
         <Body

@@ -103,7 +103,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head />
       <body
         className={clsx(
-          'bg-background font-sans antialiased',
+          'bg-background font-sans antialiased !overflow-hidden',
           fontSans.variable,
           starWhite.variable,
           youngSerif.variable
