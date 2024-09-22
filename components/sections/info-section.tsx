@@ -33,6 +33,7 @@ function Info({ children, description, title, delay, className, src }: InfoProps
       <div className='w-[60px] lg:w-[2rem] info-img-wrapper'>
         <NextImage
           alt={title}
+          sizes='(max-width: 640px) 60px, 10vw'
           src={src}
           style={{
             objectFit: 'contain',

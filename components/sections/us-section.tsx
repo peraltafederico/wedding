@@ -40,7 +40,8 @@ function UsSection() {
                 fill
                 alt='Vacation Image'
                 placeholder='blur'
-                sizes='(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                quality={100}
+                sizes='(max-width: 640px) 100vw, 33vw'
                 src={slide}
               />
             </SwiperSlide>

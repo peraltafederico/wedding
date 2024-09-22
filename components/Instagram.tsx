@@ -45,7 +45,7 @@ function Instagram() {
       target='_blank'
       onClick={handleInstagram}>
       <div className='flex gap-2 items-center'>
-        <NextImage alt='Instagram' height={80} src={src} width={80} />
+        <NextImage alt='Instagram' height={80} sizes='(max-width: 640px) 80px, 100px' src={src} width={80} />
       </div>
     </a>
   );
