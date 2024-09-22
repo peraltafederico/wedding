@@ -23,6 +23,8 @@ type InfoProps = {
   src: StaticImageData;
 };
 
+const DIRECTIONS = 'https://g.co/kgs/FH6vC8y';
+
 function Info({ children, description, title, delay, className, src }: InfoProps) {
   return (
     <div
@@ -86,7 +88,7 @@ function InfoSection() {
             <Button
               as='a'
               className='text-xs mt-1 hidden md:flex'
-              href='https://www.google.com/maps/place/Mendoza+3499,+B1621CDG+Benavidez,+Provincia+de+Buenos+Aires/@-34.4166203,-58.7144082,1065m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bca194caa79cbb:0x49567f11cd2e5506!8m2!3d-34.4166203!4d-58.7144082!16s%2Fg%2F11f3sj5133?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D'
+              href={DIRECTIONS}
               size='sm'
               target='_blank'
               variant='light'
@@ -96,7 +98,7 @@ function InfoSection() {
             <Button
               as='a'
               className='text-xs mt-1 md:hidden'
-              href='https://www.google.com/maps/place/Mendoza+3499,+B1621CDG+Benavidez,+Provincia+de+Buenos+Aires/@-34.4166203,-58.7144082,1065m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bca194caa79cbb:0x49567f11cd2e5506!8m2!3d-34.4166203!4d-58.7144082!16s%2Fg%2F11f3sj5133?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D'
+              href={DIRECTIONS}
               size='sm'
               target='_blank'
               variant='flat'
