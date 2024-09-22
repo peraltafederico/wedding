@@ -4,13 +4,18 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import NextImage from 'next/image';
 
-import slide1 from '../../assets/slide1.jpg';
-import slide2 from '../../assets/slide2.jpg';
-import slide3 from '../../assets/slide3.jpg';
+import beach1 from '../../assets/carousel/beach1.jpg';
+import boat1 from '../../assets/carousel/boat1.jpg';
+import mexico1 from '../../assets/carousel/mexico1.jpg';
+import sea1 from '../../assets/carousel/sea1.jpg';
+import sea2 from '../../assets/carousel/sea2.jpg';
+import sea3 from '../../assets/carousel/sea3.jpg';
 import Section, { Center } from '../section';
 
 import 'swiper/css';
 import 'swiper/css/effect-cards';
+
+const ORDERED_SLIDES = [beach1, sea1, boat1, sea2, mexico1, sea3];
 
 function UsSection() {
   return (
@@ -38,12 +43,9 @@ function UsSection() {
             512: {
               spaceBetween: 32,
             },
-            1024: {
-              spaceBetween: 64,
-            },
           }}
           slidesPerView='auto'>
-          {[slide1, slide2, slide3, slide1, slide2, slide3].map(slide => (
+          {ORDERED_SLIDES.map(slide => (
             <SwiperSlide key={slide.src}>
               <NextImage fill alt='Default Image' src={slide} />
             </SwiperSlide>

@@ -22,6 +22,7 @@ export function Providers({ children, themeProps, locale }: ProvidersProps) {
   useEffect(() => {
     if (process.env.NEXT_PUBLIC_MIXPANEL_TOKEN) {
       mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_TOKEN);
+      mixpanel.identify();
       mixpanel.track_pageview();
     }
   }, []);
