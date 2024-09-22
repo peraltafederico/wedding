@@ -19,12 +19,6 @@ function Config() {
   const [isPending, startTransition] = useTransition();
   const locale = useContext(LocaleContext);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && !audioRef.current) {
-      audioRef.current = new Audio('/audio/song.mp3');
-    }
-  }, []); // Ensures the audio object is only created once
-
   function handleLanguage() {
     startTransition(async () => {
       const l = locale === 'en' ? 'es' : 'en';
@@ -53,6 +47,9 @@ function Config() {
     } else {
       track('Play Song');
       setIsSound(!isSound);
+      if (!audioRef.current) {
+        audioRef.current = new Audio('/audio/song.mp3');
+      }
       audioRef?.current?.play();
     }
   };
