@@ -23,7 +23,7 @@ type InfoProps = {
   src: StaticImageData;
 };
 
-const DIRECTIONS = 'https://g.co/kgs/FH6vC8y';
+const DIRECTIONS = 'https://maps.app.goo.gl/JUnGFbCWYJT7HR2u6?g_st=com.google.maps.preview.copy';
 
 function Info({ children, description, title, delay, className, src }: InfoProps) {
   return (
