@@ -6,8 +6,7 @@
     "dev": "next dev --turbo -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
-    "postbuild": "next-sitemap"
+    "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -43,7 +42,6 @@
     "mixpanel-browser": "^2.55.1",
     "next": "14.2.4",
     "next-intl": "^3.19.1",
-    "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^10.0.3",
