@@ -7,7 +7,6 @@ import clsx from 'clsx';
 import { Button } from '@nextui-org/button';
 
 import Section, { Center } from '../section';
-import simpleFlower from '../../assets/simple-flower.png';
 import date from '../../assets/icons/date.png';
 import place from '../../assets/icons/place.png';
 import camera from '../../assets/icons/camera.png';
@@ -67,20 +66,6 @@ function InfoSection() {
     <Section className='flex justify-center'>
       <Center className='flex flex-col items-center'>
         <div className='relative w-fit md:grid flex flex-col md:grid-cols-2 md:grid-rows-2 md:gap-x-24 md:gap-y-12 gap-y-6 info-container'>
-          {/* <NextImage
-            alt='Default Image'
-            src={simpleFlower}
-            style={{
-              opacity: 0.1,
-              width: '300px',
-              maxWidth: 'unset',
-              top: 0,
-              left: -140,
-              position: 'absolute',
-            }}
-          /> */}
-
-          {/* TODO: Reuse buttons  */}
           <Info delay={100} description={t('date.date')} src={date} title={t('date.title')}>
             <span className='font-whiteStar text-mossGreen'>{t('date.time')}</span>
           </Info>
