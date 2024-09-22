@@ -11,41 +11,44 @@ import Snap from '../components/snap';
 
 import { Providers } from './providers';
 
+const DESCRIPTION = 'Te invitamos a formar parte de nuestra historia!';
+const TITLE = '¡Nos Casamos! Cami & Fede';
+
 import { fontSans, starWhite, youngSerif } from '@/config/fonts';
 export const metadata: Metadata = {
   title: {
-    default: '¡Nos Casamos! Cami & Fede',
-    template: `%s | ¡Nos Casamos! Cami & Fede`,
+    default: TITLE,
+    template: `%s | ${TITLE}`,
   },
-  description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
+  description: DESCRIPTION,
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    siteName: '¡Nos Casamos! Cami & Fede',
-    title: '¡Nos Casamos! Cami & Fede',
-    description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
+    siteName: TITLE,
+    title: TITLE,
+    description: DESCRIPTION,
     url: 'https://noscasamos.camiyfede.com',
     images: [
       {
         url: '/cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cami y Fede',
+        alt: 'Cami & Fede',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@_pfederico',
-    description: 'Te invitamos a formar parte de nuestro casamiento, nuestro día mas soñado!',
-    title: '¡Nos Casamos! Cami & Fede',
+    description: DESCRIPTION,
+    title: TITLE,
     images: [
       {
         url: '/cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cami y Fede',
+        alt: 'Cami & Fede',
       },
     ],
   },
