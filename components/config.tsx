@@ -58,23 +58,23 @@ function Config() {
 
   return (
     <div className='fixed z-10 right-0'>
-      <div className='p-2 flex gap-2'>
+      <div className='p-2 flex gap-2 md:gap-4 lg:gap-2'>
         <FontAwesomeIcon
-          className='md:w-3 px-2 md:px-0 text-light select-none transition-all duration-300'
+          className='md:w-5 xl:w-3 px-2 md:px-0 text-light select-none transition-all duration-300'
           icon={isSound ? faVolumeMute : faVolumeHigh}
           role='button'
           size='lg'
           onClick={handleSound}
         />
         <FontAwesomeIcon
-          className='md:w-2 px-2 md:px-0 text-light select-none transition-all duration-300'
+          className='md:w-4 xl:w-2 px-2 md:px-0 text-light select-none transition-all duration-300'
           icon={isLight ? faMoon : faSun}
           role='button'
           size='lg'
           onClick={handleTheme}
         />
         <FontAwesomeIcon
-          className={clsx('md:w-4 md:px-0 px-2 text-light select-none', {
+          className={clsx('md:w-6 xl:w-4 md:px-0 px-2 text-light select-none', {
             'opacity-50': isPending,
             'cursor-not-allowed': isPending,
             'transition-all duration-300': !isPending,
