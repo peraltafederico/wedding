@@ -17,7 +17,7 @@ function InviteCTA({ text }: Props) {
 
   const href = {
     es: 'https://docs.google.com/forms/d/1jcMBC6Rhw_JDOkxwRukwnl60YiZH5GtSBg1TGEQJbOE',
-    en: 'https://www.instagram.com/noscasamos.camiyfede',
+    en: 'https://docs.google.com/forms/d/1YLzEFxQP7Y3SUzWI70tGPi0H1Hn0XrzGy0hiTXvYwfM',
   };
 
   return (
