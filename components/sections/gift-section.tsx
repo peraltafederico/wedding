@@ -2,8 +2,7 @@ import React from 'react';
 import NextImage from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import leftFlower1 from '../assets/left-flower-1.png';
-import leftFlower2 from '../assets/left-flower-2.png';
+import leftFlower2 from '../../assets/left-flower-2.png';
 import Section, { Center } from '../section';
 import Body from '../body';
 import GiftTrigger from '../gift-trigger';
@@ -14,19 +13,12 @@ function GiftSection() {
   return (
     <>
       <Section>
-        <Center>
-          {/* <NextImage
-          alt='Default Image'
-          src={leftFlower2}
-          style={{
-            opacity: 0.25,
-            position: 'absolute',
-            left: -180,
-            top: -32,
-            maxWidth: 'unset',
-            width: '300px',
-          }}
-        /> */}
+        <Center className='!overflow-visible'>
+          <NextImage
+            alt='Default Image'
+            className='opacity-50 absolute left-[-4rem] md:left-[-9rem] top-[-6rem] w-[15rem] md:w-[10rem] max-w-none md:w-[20rem] md:opacity-100'
+            src={leftFlower2}
+          />
           <Body
             body={{
               text: t('description'),
