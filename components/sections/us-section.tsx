@@ -36,7 +36,12 @@ function UsSection() {
           slidesPerView='auto'>
           {ORDERED_SLIDES.map(slide => (
             <SwiperSlide key={slide.src}>
-              <NextImage fill alt='Default Image' src={slide} />
+              <NextImage
+                fill
+                alt='Vacation Image'
+                sizes='(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                src={slide}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

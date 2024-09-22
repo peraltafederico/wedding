@@ -15,7 +15,7 @@ function GiftSection() {
       <Section>
         <Center className='!overflow-visible'>
           <NextImage
-            alt='Default Image'
+            alt='Flower'
             className='opacity-50 absolute left-[-12rem] md:left-[-9rem] top-[-6rem] w-[25rem] max-w-none md:w-[20rem] md:opacity-100'
             src={leftFlower2}
           />
