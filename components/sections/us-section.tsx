@@ -14,23 +14,12 @@ import Section, { Center } from '../section';
 
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-
-const ORDERED_SLIDES = [beach1, sea1, boat1, sea2, mexico1, sea3];
+const ORDERED_SLIDES = [sea3, sea2, boat1, beach1, mexico1, sea1];
 
 function UsSection() {
   return (
     <Section className='us-slider'>
       <Center fullWide data-aos='fade-up'>
-        {/* <NextImage
-        alt='Default Image'
-        src={simpleFlower}
-        style={{
-          opacity: 0.1,
-          width: '300px',
-          top: 0,
-          position: 'absolute',
-        }}
-      /> */}
         <Swiper
           centeredSlides
           grabCursor
