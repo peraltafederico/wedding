@@ -1,6 +1,5 @@
 import React from 'react';
 import NextImage from 'next/image';
-import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
 import leftFlower1 from '../../assets/left-flower-1.png';
