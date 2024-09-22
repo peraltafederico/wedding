@@ -13,7 +13,7 @@ function Snap({ children }: Props) {
       credits={{
         enabled: false,
       }}
-      licenseKey='xxxxxxxxxx'
+      licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE_KEY}
       render={() => {
         return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
       }}
