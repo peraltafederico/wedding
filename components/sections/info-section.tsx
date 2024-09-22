@@ -8,10 +8,10 @@ import { Button } from '@nextui-org/button';
 
 import Section, { Center } from '../section';
 import simpleFlower from '../../assets/simple-flower.png';
-import date from '../../assets/date.png';
-import place from '../../assets/place.png';
-import camera from '../../assets/camera.png';
-import dress from '../../assets/dress.png';
+import date from '../../assets/icons/date.png';
+import place from '../../assets/icons/place.png';
+import camera from '../../assets/icons/camera.png';
+import dress from '../../assets/icons/dress.png';
 import { track } from '../../utils/mixpanel';
 
 type InfoProps = {
