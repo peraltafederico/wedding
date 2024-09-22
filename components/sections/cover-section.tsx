@@ -6,8 +6,8 @@ import { useTranslations } from 'next-intl';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper/modules';
 
-import cover from '../../assets/cover.jpg';
-import cover1 from '../../assets/slide1.jpg';
+import cover1 from '../../assets/cover/cover1.jpg';
+import cover2 from '../../assets/cover/cover2.jpg';
 import Section from '../section';
 
 function CoverSection() {
@@ -33,9 +33,9 @@ function CoverSection() {
         effect={'fade'}
         modules={[EffectFade, Autoplay]}
         slidesPerView='auto'>
-        {[cover, cover1].map(slide => (
+        {[cover1, cover2].map(slide => (
           <SwiperSlide key={slide.src}>
-            <NextImage fill alt='Default Image' src={slide} />
+            <NextImage fill alt={'Cami & Fede'} src={slide} />
           </SwiperSlide>
         ))}
       </Swiper>
