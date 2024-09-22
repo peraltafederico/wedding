@@ -16,11 +16,13 @@ function HistorySection() {
         <NextImage
           alt='Flower'
           className='opacity-25 absolute left-[-7rem] md:left-[-4rem] top-[50%] transform -translate-y-1/2 w-[14rem] md:w-[10rem] max-w-none md:opacity-100'
+          sizes='33vw'
           src={leftFlower1}
         />
         <NextImage
           alt='Flower'
           className='opacity-25 absolute right-[-7rem] md:right-[-4rem] top-[50%] transform -translate-y-1/2 w-[14rem] md:w-[10rem] max-w-none md:opacity-100 hidden sm:block'
+          slot='33vw'
           src={rightFlower1}
         />
         <Body

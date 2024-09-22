@@ -35,7 +35,7 @@ function CoverSection() {
         slidesPerView='auto'>
         {[cover1, cover2].map(slide => (
           <SwiperSlide key={slide.src}>
-            <NextImage fill alt={'Cami & Fede'} placeholder='blur' src={slide} />
+            <NextImage fill alt={'Cami & Fede'} placeholder='blur' quality={100} sizes='100vw' src={slide} />
           </SwiperSlide>
         ))}
       </Swiper>

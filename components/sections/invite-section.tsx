@@ -18,6 +18,7 @@ function InviteSection() {
         <NextImage
           alt='Flower'
           className='opacity-50 absolute w-[150%] max-w-[unset] sm:max-w-[80%] sm:w-full left-1/2 bottom-0 transform translate-x-[-50%] translate-y-[50%] md:opacity-100'
+          sizes='50vw'
           src={bottomFlower}
         />
         <div />

@@ -17,6 +17,7 @@ function GiftSection() {
           <NextImage
             alt='Flower'
             className='opacity-50 absolute left-[-12rem] md:left-[-9rem] top-[-6rem] w-[25rem] max-w-none md:w-[20rem] md:opacity-100'
+            sizes='33vw'
             src={leftFlower2}
           />
           <Body
