@@ -1,10 +1,10 @@
+'use client';
+
 import { Button } from '@nextui-org/button';
 import Link from 'next/link';
 import React from 'react';
 
 import { track } from '../utils/mixpanel';
-
-type Props = {};
 
 const GoBackHome = () => {
   return (
