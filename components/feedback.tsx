@@ -19,7 +19,7 @@ const Feedback = () => {
         <div className='flex flex-col absolute top-7'>
           <h1 className='text-white font-bold text-2xl'>{t('title')}</h1>
           <Button
-            className='font-youngSerif font-bold bg-mossGreen text-white opacity-90'
+            className='font-youngSerif font-bold bg-mossGreen text-white opacity-90 mt-2'
             onClick={() => {
               track('Open Photos Modal');
               onOpen();
