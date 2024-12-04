@@ -10,7 +10,6 @@ import PartyModal from './party-modal';
 const Feedback = () => {
   const { onOpen, isOpen, onOpenChange } = useDisclosure();
   const t = useTranslations('party');
-  const videoRef = React.useRef<HTMLVideoElement>(null);
 
   return (
     <>
@@ -20,7 +19,6 @@ const Feedback = () => {
           <Button
             className='font-youngSerif font-bold bg-mossGreen text-white opacity-90'
             onClick={() => {
-              videoRef.current?.play();
               onOpen();
             }}>
             {t('cta')}
@@ -28,14 +26,7 @@ const Feedback = () => {
         </div>
       </div>
       <PartyModal isOpen={isOpen} onOpenChange={onOpenChange} />
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className='w-full h-full absolute object-cover'
-        poster='/party.jpg'>
+      <video autoPlay loop muted playsInline className='w-full h-full absolute object-cover' poster='/party.jpg'>
         <source src={'/video/party.mp4'} type='video/mp4' />
       </video>
     </>

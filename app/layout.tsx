@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: 'https://noscasamos.camiyfede.com',
     images: [
       {
-        url: '/cover.jpg',
+        url: '/party.jpg',
         width: 1200,
         height: 630,
         alt: 'Cami & Fede',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: TITLE,
     images: [
       {
-        url: '/cover.jpg',
+        url: '/party.jpg',
         width: 1200,
         height: 630,
         alt: 'Cami & Fede',
