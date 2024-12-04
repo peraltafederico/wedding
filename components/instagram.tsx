@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import NextImage from 'next/image';
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
@@ -14,8 +14,11 @@ import followESLight from '../assets/icons/follow-es-light.png';
 import { track } from '../utils/mixpanel';
 import { LocaleContext } from '../app/providers';
 
-function Instagram() {
-  const [show, setShow] = React.useState(false);
+type Props = {
+  show: boolean;
+};
+
+function Instagram({ show }: Props) {
   const isSSR = useIsSSR();
   const { theme } = useTheme();
   const handleInstagram = () => {
@@ -24,16 +27,6 @@ function Instagram() {
     });
   };
   const locale = useContext(LocaleContext);
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.fullpage_api) {
-        const index = window.fullpage_api.getActiveSection().index();
-
-        setShow(index >= 3);
-      }
-    });
-  }, []);
 
   const config: Record<
     string,

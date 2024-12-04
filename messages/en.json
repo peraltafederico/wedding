@@ -40,5 +40,16 @@
     "title": "We are counting on you!",
     "description": "Get ready to enjoy an unforgettable night full of love, laughter, and dancing!",
     "cta": "Confirm Attendance"
+  },
+  "party": {
+    "title": "Thank you for coming!",
+    "cta": "View the photos",
+    "modal": {
+      "title": "Relive Our Party!",
+      "photos": "All the Photos 📷",
+      "party": "End of Party 🎉",
+      "video": "Full Video! (Coming Soon) 📹",
+      "cta": "Back"
+    }
   }
 }
