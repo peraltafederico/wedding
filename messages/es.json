@@ -40,5 +40,17 @@
     "title": "¡Contamos con vos!",
     "description": "Preparate para disfrutar de una noche inolvidable llena de amor, risas y baile!",
     "cta": "Confirmar Asistencia"
+  },
+  "party": {
+    "title": "Gracias por venir!",
+    "cta": "Mirá las fotos",
+    "modal": {
+      "title": "¡Reviví nuestra fiesta!",
+      "photos": "Todas las fotos 📷",
+      "party": "Final de fiesta 🎉",
+      "video": "Video completo! (proximamente) 📹",
+      "invite": "Nuestra invitación 💌",
+      "cta": "Volver"
+    }
   }
 }

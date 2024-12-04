@@ -7,11 +7,11 @@ import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 
 import AOSinit from '../components/aos';
-import Snap from '../components/snap';
+import Config from '../components/config';
 
 import { Providers } from './providers';
 
-const DESCRIPTION = 'Te invitamos a formar parte de nuestra historia!';
+const DESCRIPTION = 'Gracias por formar parte de nuestra historia!';
 const TITLE = '¡Nos Casamos! Cami & Fede';
 
 import { fontSans, starWhite, youngSerif } from '@/config/fonts';
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: 'https://noscasamos.camiyfede.com',
     images: [
       {
-        url: '/cover.jpg',
+        url: '/party.jpg',
         width: 1200,
         height: 630,
         alt: 'Cami & Fede',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: TITLE,
     images: [
       {
-        url: '/cover.jpg',
+        url: '/party.jpg',
         width: 1200,
         height: 630,
         alt: 'Cami & Fede',
@@ -110,9 +110,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         )}>
         <AOSinit />
         <Providers locale={locale} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <Snap>
-            <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
-          </Snap>
+          <NextIntlClientProvider messages={messages}>
+            <Config />
+            {children}
+          </NextIntlClientProvider>
         </Providers>
       </body>
     </html>
