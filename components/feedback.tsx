@@ -5,6 +5,8 @@ import React from 'react';
 import { useDisclosure } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 
+import { track } from '../utils/mixpanel';
+
 import PartyModal from './party-modal';
 
 const Feedback = () => {
@@ -19,6 +21,7 @@ const Feedback = () => {
           <Button
             className='font-youngSerif font-bold bg-mossGreen text-white opacity-90'
             onClick={() => {
+              track('Open Photos Modal');
               onOpen();
             }}>
             {t('cta')}

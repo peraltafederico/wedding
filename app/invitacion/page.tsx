@@ -7,10 +7,12 @@ import InfoSection from '../../components/sections/info-section';
 import GiftSection from '../../components/sections/gift-section';
 import InviteSection from '../../components/sections/invite-section';
 import DynamicInstagram from '../../components/dynamic-instagram';
+import GoBackHome from '../../components/go-back-home';
 
 export default function Home() {
   return (
     <>
+      <GoBackHome />
       <DynamicInstagram />
       <CoverSection />
       <HistorySection />

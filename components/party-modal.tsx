@@ -1,5 +1,8 @@
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
+import { track } from '../utils/mixpanel';
 
 type Props = {
   isOpen: boolean;
@@ -34,7 +37,10 @@ function PartyModal({ isOpen, onOpenChange }: Props) {
                   href='https://drive.google.com/drive/folders/1c7qOKCrrk5RSUUcVIvdTeeBmBUyjDDLS?usp=sharing'
                   size='sm'
                   target='_blank'
-                  variant='bordered'>
+                  variant='bordered'
+                  onClick={() => {
+                    track('See Photos');
+                  }}>
                   {t('photos')}
                 </Button>
                 <Button
@@ -44,11 +50,26 @@ function PartyModal({ isOpen, onOpenChange }: Props) {
                   href='https://youtu.be/GBqf6IaUWvU?si=w-yDLtu-8s3kYUD3'
                   size='sm'
                   target='_blank'
-                  variant='bordered'>
+                  variant='bordered'
+                  onClick={() => {
+                    track('See Party Video');
+                  }}>
                   {t('party')}
                 </Button>
                 <Button isDisabled as='a' className={buttonClasses} color='primary' size='sm' variant='bordered'>
                   {t('video')}
+                </Button>
+                <Button
+                  as={Link}
+                  className={buttonClasses}
+                  color='primary'
+                  href='/invitacion'
+                  size='sm'
+                  variant='bordered'
+                  onClick={() => {
+                    track('See Invitation');
+                  }}>
+                  {t('invite')}
                 </Button>
               </div>
             </ModalBody>
