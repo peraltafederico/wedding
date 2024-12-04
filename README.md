@@ -26,7 +26,7 @@ Install dependencies:
 pnpm install
 ```
 
-Run the development server:
+Run the development server
 
 ```bash {"id":"01J7SDBAF6PDQHTYN18ZXG4V84"}
 pnpm dev
