@@ -3,10 +3,13 @@
 import { Button } from '@nextui-org/button';
 import Link from 'next/link';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 import { track } from '../utils/mixpanel';
 
 const GoBackHome = () => {
+  const t = useTranslations('cover');
+
   return (
     <Button
       as={Link}
@@ -16,7 +19,7 @@ const GoBackHome = () => {
       onClick={() => {
         track('Go Back Home');
       }}>
-      Volver las fotos
+      {t('goBack')}
     </Button>
   );
 };
