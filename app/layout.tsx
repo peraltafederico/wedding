@@ -11,7 +11,7 @@ import Config from '../components/config';
 
 import { Providers } from './providers';
 
-const DESCRIPTION = 'Te invitamos a formar parte de nuestra historia!';
+const DESCRIPTION = 'Gracias por formar parte de nuestra historia!';
 const TITLE = '¡Nos Casamos! Cami & Fede';
 
 import { fontSans, starWhite, youngSerif } from '@/config/fonts';
