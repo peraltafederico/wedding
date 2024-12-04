@@ -1,25 +1,17 @@
 import '@/styles/page.css';
 
-import CoverSection from '../components/sections/cover-section';
-import HistorySection from '../components/sections/history-section';
-import UsSection from '../components/sections/us-section';
-import InfoSection from '../components/sections/info-section';
-import GiftSection from '../components/sections/gift-section';
-import InviteSection from '../components/sections/invite-section';
-import Config from '../components/config';
-import Instagram from '../components/Instagram';
+import Feedback from '../components/feedback';
+import Instagram from '../components/instagram';
 
 export default function Home() {
   return (
     <>
-      <Config />
-      <Instagram />
-      <CoverSection />
-      <HistorySection />
-      <UsSection />
-      <InfoSection />
-      <GiftSection />
-      <InviteSection />
+      <div className='h-screen w-full bg-black'>
+        <div className='h-full w-full relative overflow-hidden bg-red opacity-70 flex justify-center items-center'>
+          <Feedback />
+        </div>
+      </div>
+      <Instagram show />
     </>
   );
 }

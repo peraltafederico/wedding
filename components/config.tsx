@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useContext, useEffect, useRef, useState, useTransition } from 'react';
+import React, { useContext, useRef, useState, useTransition } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute, faLanguage, faMoon, faSun, faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { useIsSSR } from '@react-aria/ssr';
 import { useTheme } from 'next-themes';
 import clsx from 'clsx';
+import { usePathname } from 'next/navigation';
 
 import { setUserLocale } from '../services/locale';
 import { track } from '../utils/mixpanel';
@@ -56,16 +57,22 @@ function Config() {
 
   const isLight = theme === 'light' || isSSR;
 
+  const pathname = usePathname();
+
+  const isInvitation = pathname === '/invitacion';
+
   return (
     <div className='fixed z-10 right-0'>
       <div className='p-2 flex gap-2 md:gap-4 lg:gap-2'>
-        <FontAwesomeIcon
-          className='md:w-5 xl:w-3 px-2 md:px-0 text-light select-none transition-all duration-300'
-          icon={isSound ? faVolumeMute : faVolumeHigh}
-          role='button'
-          size='lg'
-          onClick={handleSound}
-        />
+        {isInvitation && (
+          <FontAwesomeIcon
+            className='md:w-5 xl:w-3 px-2 md:px-0 text-light select-none transition-all duration-300'
+            icon={isSound ? faVolumeMute : faVolumeHigh}
+            role='button'
+            size='lg'
+            onClick={handleSound}
+          />
+        )}
         <FontAwesomeIcon
           className='md:w-4 xl:w-2 px-2 md:px-0 text-light select-none transition-all duration-300'
           icon={isLight ? faMoon : faSun}

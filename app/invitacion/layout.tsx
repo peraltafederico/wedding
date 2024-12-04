@@ -1,20 +1,10 @@
-import '@/styles/globals.css';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
 import { Metadata, Viewport } from 'next';
-import clsx from 'clsx';
-import { getLocale, getMessages } from 'next-intl/server';
-import { NextIntlClientProvider } from 'next-intl';
 
-import AOSinit from '../components/aos';
-import Config from '../components/config';
-
-import { Providers } from './providers';
+import Snap from '../../components/snap';
 
 const DESCRIPTION = 'Te invitamos a formar parte de nuestra historia!';
 const TITLE = '¡Nos Casamos! Cami & Fede';
 
-import { fontSans, starWhite, youngSerif } from '@/config/fonts';
 export const metadata: Metadata = {
   title: {
     default: TITLE,
@@ -88,34 +78,6 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const locale = await getLocale();
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
-
-  return (
-    <html
-      suppressHydrationWarning
-      className='scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded-full'
-      lang={locale}>
-      <head />
-      <body
-        className={clsx(
-          'bg-background font-sans antialiased',
-          fontSans.variable,
-          starWhite.variable,
-          youngSerif.variable
-        )}>
-        <AOSinit />
-        <Providers locale={locale} themeProps={{ attribute: 'class', defaultTheme: 'light' }}>
-          <NextIntlClientProvider messages={messages}>
-            <Config />
-            {children}
-          </NextIntlClientProvider>
-        </Providers>
-      </body>
-    </html>
-  );
+export default async function Layout({ children }: { children: React.ReactNode }) {
+  return <Snap>{children}</Snap>;
 }
