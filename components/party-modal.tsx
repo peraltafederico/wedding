@@ -73,7 +73,7 @@ function PartyModal({ isOpen, onOpenChange }: Props) {
                 </Button>
               </div>
             </ModalBody>
-            <ModalFooter className='lg:py-[1em] lg:px-[1.5em] px-4'>
+            <ModalFooter className='lg:py-[1em] lg:px-[1.5em] px-4 '>
               <Button className={buttonClasses} color='primary' onPress={onClose}>
                 {t('cta')}
               </Button>
